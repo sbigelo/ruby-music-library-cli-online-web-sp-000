@@ -33,9 +33,7 @@ class Genre
   end
   
   def self.create(name)
-    genres = new(name)
-    genres.save
-    genres
+    new(name).tap{ |g| g.save }
   end
   
 end
